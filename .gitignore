@@ -1,4 +1,13 @@
+<<<<<<< HEAD
+*.i
+*.ii
+*.gpu
+*.ptx
+*.cubin
+*.fatbin
+=======
 .venv/
 docs/_build/
 __pycache__/
 *.pyc
+>>>>>>> f4cb43f (Initial CityFFD2 documentation website)

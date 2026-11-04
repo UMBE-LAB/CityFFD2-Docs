@@ -20,5 +20,6 @@ Contents
    :maxdepth: 2
 
    installation
-   user_guide
-   methodology
+   benchmark_cases/index
+   user_guide/index
+   

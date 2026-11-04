@@ -7,7 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'CityFFD2'
-copyright = '2026, Jinbin Fu'
+copyright = '2026, UMBE-LAB'
+html_show_copyright = False
+
 author = 'Jinbin Fu'
 release = '2.1'
 
@@ -26,3 +28,4 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+html_css_files = ['css/custom.css',]
