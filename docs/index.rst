@@ -1,0 +1,24 @@
+Welcome to CityFFD2's Documentation!
+========================================
+
+CityFFD2 is a multi-GPU parallelized computational fluid dynamics
+solver designed for 3D urban airflow, heat transfer, natural
+ventilation, and urban microclimate simulations.
+
+CityFFD2 supports large-scale simulations using MPI and CUDA
+on multiple NVIDIA GPUs.
+
+.. note::
+
+   This documentation is under active development.
+
+
+Contents
+--------
+
+.. toctree::
+   :maxdepth: 2
+
+   installation
+   user_guide
+   methodology
