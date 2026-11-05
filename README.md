@@ -192,7 +192,7 @@ CityFFD2-Docs/
 
 The `docs/` directory contains the Sphinx source files. The `_build/html/` directory is generated automatically and does not need to be committed to Git.
 
-## 7. CityFFD Executable
+## 7. CityFFD2 Executable
 
 This repository contains documentation only and does not include the CityFFD2 solver source code.
 
