@@ -194,7 +194,7 @@ The `docs/` directory contains the Sphinx source files. The `_build/html/` direc
 
 ## 7. CityFFD Executable
 
-This repository contains documentation only and does not include the CityFFD solver source code.
+This repository contains documentation only and does not include the CityFFD2 solver source code.
 
 CityFFD2.1 is distributed separately as a precompiled executable to authorized users.
 
