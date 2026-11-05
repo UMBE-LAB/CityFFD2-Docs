@@ -1,6 +1,6 @@
 # CityFFD2 Documentation
 
-This repository contains the documentation for **CityFFD2 (City Fast Fluid Dynamics2)**, a GPU-accelerated computational fluid dynamics (CFD) solver designed for high-resolution urban airflow and microclimate simulations.
+This repository contains the documentation for **CityFFD2 (City Fast Fluid Dynamics version 2)**, a GPU-accelerated computational fluid dynamics (CFD) solver designed for high-resolution urban airflow and microclimate simulations.
 
 The documentation is maintained using **Sphinx** and the **Read the Docs theme**.
 
