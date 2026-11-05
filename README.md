@@ -49,10 +49,10 @@ Build the HTML pages and start a local preview:
 
 ```bash
 python -m sphinx -b html docs docs/_build/html
-python -m http.server 8000 --bind 127.0.0.1 --directory docs/_build/html
+python -m http.server 8003 --bind 127.0.0.1 --directory docs/_build/html
 ```
 
-Open [the local documentation](http://127.0.0.1:8000/) in your browser. After editing a page, rerun the Sphinx build in a second terminal with the virtual environment active, then refresh the browser.
+Open [the local documentation](http://127.0.0.1:8003/) in your browser. After editing a page, rerun the Sphinx build in a second terminal with the virtual environment active, then refresh the browser.
 
 ## 🤝 Contributing to the documentation
 
