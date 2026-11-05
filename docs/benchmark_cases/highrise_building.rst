@@ -9,7 +9,7 @@ The wind-tunnel model has a scale of 1:400. The central building is
 ``0.25H × 0.25H × H`` and the surrounding blocks are
 ``0.4H × 0.4H × 0.1H``, where ``H = 0.25 m`` is the central building
 height. The incoming wind follows a power-law profile with exponent
-``0.25``. The reference wind speed at ``H`` is ``6.65 m/s``, and the
+``0.25``. The reference wind speed at ``H`` is ``6.61 m/s``, and the
 experimental wind directions used here is ``0°``.
 
 .. figure:: /_static/images/benchmark_cases/highrise_building/case_d_geometry.png

@@ -2,7 +2,7 @@
 
 export NVHPC_ROOT=/path/to/hpc_sdk/Linux_x86_64/23.9
 export COMPILER_ROOT=$NVHPC_ROOT/compilers
-export MPI_ROOT=$NVHPC_ROOT/comm_libs/openmpi/openmpi-4.1.5
+export MPI_ROOT=/path/to/openmpi-4.1.5
 export CUDA_ROOT=$NVHPC_ROOT/cuda/12.2
 export NCCL_ROOT=$NVHPC_ROOT/comm_libs/nccl
 
