@@ -4,7 +4,7 @@ CityFFD2 is a multi-GPU computational fluid dynamics (CFD) solver for urban airf
 
 [Documentation home](docs/index.rst) · [Installation and execution](docs/installation.rst) · [Benchmark cases](docs/benchmark_cases/index.rst)
 
-## 📖 Using CityFFD
+## 📖 Using CityFFD2
 
 | If you want to… | Start here |
 | --- | --- |
