@@ -1,218 +1,62 @@
 # CityFFD2 Documentation
 
-This repository contains the documentation for **CityFFD2 (City Fast Fluid Dynamics version 2)**, a multi-GPU parallelized computational fluid dynamics (CFD) solver designed for high-resolution urban airflow and microclimate simulations.
+CityFFD2 is a multi-GPU computational fluid dynamics (CFD) solver for urban airflow and heat transfer. This repository contains the Sphinx documentation for CityFFD2. It guides users through setting up the Linux executable, configuring a simulation, and comparing results with experimental measurements.
 
-The documentation is maintained using **Sphinx** and the **Read the Docs theme**.
+[Documentation home](docs/index.rst) · [Installation and execution](docs/installation.rst) · [Benchmark cases](docs/benchmark_cases/index.rst)
 
-**Access to this repository is restricted to authorized users.**
+## 📖 Using CityFFD
 
-## Documentation Contents
+| If you want to… | Start here |
+| --- | --- |
+| Set up the solver | [Installation and execution](docs/installation.rst) covers the NVIDIA GPU, MPI runtime, and executable setup. The project maintainers distribute the precompiled solver separately to authorized users. |
+| Run your first case | [Getting started](docs/user_guide/quick_start.rst) walks through the case directory, including `CityFFD.domain`, the `Inp/` folder, and the launch command. |
+| Run on multiple GPUs | [Parallel and GPU configuration](docs/user_guide/parallel_gpu.rst) explains how to match the MPI process count to the domain decomposition and assign one GPU per process. |
+| Compare a simulation with measurements | The [benchmark index](docs/benchmark_cases/index.rst) lists the case input packages and experimental data. |
 
-The documentation includes:
+### Benchmark cases
 
-- **Installation and Execution** — System requirements, runtime libraries, executable distribution, and execution instructions.
-- **Benchmark Cases** — Validation examples, experimental measurements, and simulation input files.
-- **User Guide** — Simulation configuration, computational domain, geometry and mesh, boundary conditions, MPI/GPU parallelization, and output settings.
+- **[Natural ventilation around a building block](docs/benchmark_cases/natural_ventilation.rst)** compares simulated airflow with experimental measurements for the natural ventilation case.
+- **[High-rise building surrounded by low-rise buildings](docs/benchmark_cases/highrise_building.rst)** compares wind speeds at measurement points around the high-rise building.
 
-## 1. Download the Documentation
+## 📁 Repository layout
 
-Authorized users can download the documentation from the private GitHub repository:
+| Path | Purpose |
+| --- | --- |
+| `docs/index.rst` | Documentation homepage and navigation |
+| `docs/installation.rst` | Solver installation and execution |
+| `docs/user_guide/` | Instructions for setting up and running cases |
+| `docs/benchmark_cases/` | Benchmark descriptions and validation results |
+| `docs/_static/benchmarks/` | Downloadable benchmark inputs and reference data |
+| `docs/conf.py` | Sphinx configuration |
 
-https://github.com/UMBE-LAB/CityFFD2-Docs
+## 🛠️ Build and preview the documentation
 
-### Option A: Clone with Git (Recommended)
+You can build the website on a machine with Python. GPU hardware and the CityFFD2 executable are only needed to run simulations.
 
-First, ensure that your GitHub account has been granted access to the repository.
-
-Clone the repository using SSH:
-
-```bash
-git clone git@github.com:UMBE-LAB/CityFFD2-Docs.git
-cd CityFFD2-Docs
-```
-
-Alternatively, use HTTPS:
-
-```bash
-git clone https://github.com/UMBE-LAB/CityFFD2-Docs.git
-cd CityFFD2-Docs
-```
-
-GitHub authentication is required. For HTTPS access, use an approved authentication method such as Git Credential Manager or a personal access token when prompted. GitHub account passwords cannot be used for Git operations over HTTPS.
-
-### Option B: Download ZIP
-
-If you do not use Git:
-
-1. Sign in to GitHub with an authorized account.
-2. Open the [CityFFD2-Docs repository](https://github.com/UMBE-LAB/CityFFD2-Docs).
-3. Click **Code → Download ZIP**.
-4. Extract the downloaded ZIP file.
-5. Open a terminal in the extracted `CityFFD2-Docs` directory.
-
-## 2. Install Documentation Dependencies
-
-The documentation requires Python, Sphinx, and the packages listed in `requirements.txt`.
-
-On Linux (Ubuntu recommended), ensure that Python 3, pip, and the Python virtual environment package are available.
-
-For Ubuntu, these can be installed using:
-
-```bash
-sudo apt update
-sudo apt install python3 python3-pip python3-venv make
-```
-
-From the `CityFFD2-Docs` directory, create and activate a virtual environment:
+From the repository root, create a virtual environment and install the documentation dependencies:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
+if [ -f docs/requirements.txt ]; then
+    python -m pip install -r docs/requirements.txt
+else
+    python -m pip install -r requirements.txt
+fi
 ```
 
-Install the required Python packages:
+Build the HTML pages and start a local preview:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m sphinx -b html docs docs/_build/html
+python -m http.server 8000 --bind 127.0.0.1 --directory docs/_build/html
 ```
 
-Verify the Sphinx installation:
+Open [the local documentation](http://127.0.0.1:8000/) in your browser. After editing a page, rerun the Sphinx build in a second terminal with the virtual environment active, then refresh the browser.
 
-```bash
-sphinx-build --version
-```
+## 🤝 Contributing to the documentation
 
-## 3. Build the HTML Documentation
-
-From the repository root directory, run:
-
-```bash
-cd docs
-make html
-```
-
-Sphinx converts the `.rst` source files into HTML pages.
-
-After a successful build, the generated website is located at:
-
-```text
-docs/_build/html/
-```
-
-The main page is:
-
-```text
-docs/_build/html/index.html
-```
-
-To rebuild the entire documentation from a clean state:
-
-```bash
-make clean
-make html
-```
-
-## 4. Open the Documentation Locally
-
-There are two ways to view the documentation in a web browser.
-
-### Option A: Open the HTML File Directly
-
-Open the generated `index.html` file using a browser.
-
-On Ubuntu:
-
-```bash
-xdg-open _build/html/index.html
-```
-
-This method does not require a web server.
-
-### Option B: Start a Local Web Server (Recommended)
-
-From the `docs` directory, run:
-
-```bash
-python3 -m http.server 8000 --bind 127.0.0.1 --directory _build/html
-```
-
-Then open the following address in your browser:
-
-**http://localhost:8000**
-
-The documentation website will be available locally with its navigation menu, internal links, figures, and downloadable files included in the HTML build.
-
-Press `Ctrl+C` in the terminal to stop the server.
-
-If port `8000` is already in use, replace it with another port, such as `8003`.
-
-## 5. Update and Rebuild
-
-If the documentation was cloned using Git, authorized users can retrieve the latest changes by running:
-
-```bash
-cd CityFFD2-Docs
-git pull
-```
-
-Then activate the Python environment and rebuild:
-
-```bash
-source .venv/bin/activate
-cd docs
-make html
-```
-
-Refresh the browser to view the updated documentation.
-
-If the requirements have changed, reinstall them using:
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-## 6. Repository Structure
-
-```text
-CityFFD2-Docs/
-├── .readthedocs.yaml
-├── requirements.txt
-├── README.md
-└── docs/
-    ├── conf.py
-    ├── index.rst
-    ├── installation.rst
-    ├── user_guide/
-    ├── benchmark_cases/
-    ├── _static/
-    ├── _templates/
-    └── _build/               # Generated after building
-```
-
-The `docs/` directory contains the Sphinx source files. The `_build/html/` directory is generated automatically and does not need to be committed to Git.
-
-## 7. CityFFD2 Executable
-
-This repository contains documentation only and does not include the CityFFD2 solver source code.
-
-CityFFD2 is distributed separately as a precompiled executable to authorized users.
-
-The solver requires a compatible runtime environment, including NVIDIA HPC SDK, CUDA, Open MPI, NCCL, TecIO, and HDF5.
-
-Please refer to the **Installation and Execution** section of the locally built documentation for details.
-
-**Note:** Building this documentation does not compile or install the CityFFD solver.
-
-## 8. Access and Distribution
-
-This repository is intended for authorized users and collaborators.
-
-The documentation, benchmark resources, and any associated materials must be used in accordance with the applicable distribution permissions and third-party licenses.
-
-Access to the documentation repository does not automatically grant permission to access, modify, or redistribute the CityFFD solver source code or executable.
-
-## Project
-
-**Urban Microclimate and Building Energy (UMBE) Laboratory**
-
-GitHub Organization: https://github.com/UMBE-LAB
+1. Create a branch for your changes and edit the relevant reStructuredText (`.rst`) files under `docs/`.
+2. When adding a page, include it in the parent page’s `toctree` so readers can find it in the navigation.
+3. Rebuild the site and review the affected pages in the local preview. For benchmark updates, check that figures render and that input and measurement files download from the benchmark index.
+4. Open a pull request describing the change and how you checked it.
