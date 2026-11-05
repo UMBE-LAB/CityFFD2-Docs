@@ -1,6 +1,6 @@
 # CityFFD2 Documentation
 
-This repository contains the documentation for **CityFFD2 (City Fast Fluid Dynamics2)**, a multi-GPU parallelized computational fluid dynamics (CFD) solver designed for high-resolution urban airflow and microclimate simulations.
+This repository contains the documentation for **CityFFD2 (City Fast Fluid Dynamics2)**, a GPU-accelerated computational fluid dynamics (CFD) solver designed for high-resolution urban airflow and microclimate simulations.
 
 The documentation is maintained using **Sphinx** and the **Read the Docs theme**.
 
@@ -182,6 +182,7 @@ CityFFD2-Docs/
     ├── conf.py
     ├── index.rst
     ├── installation.rst
+    ├── methodology.rst
     ├── user_guide/
     ├── benchmark_cases/
     ├── _static/
@@ -189,4 +190,30 @@ CityFFD2-Docs/
     └── _build/               # Generated after building
 ```
 
-The `docs/` directory contains the Sphinx source files. The `_build/html/` directory
+The `docs/` directory contains the Sphinx source files. The `_build/html/` directory is generated automatically and does not need to be committed to Git.
+
+## 7. CityFFD Executable
+
+This repository contains documentation only and does not include the CityFFD solver source code.
+
+CityFFD2.1 is distributed separately as a precompiled executable to authorized users.
+
+The solver requires a compatible runtime environment, including NVIDIA HPC SDK, CUDA, Open MPI, NCCL, TecIO, and HDF5.
+
+Please refer to the **Installation and Execution** section of the locally built documentation for details.
+
+**Note:** Building this documentation does not compile or install the CityFFD solver.
+
+## 8. Access and Distribution
+
+This repository is intended for authorized users and collaborators.
+
+The documentation, benchmark resources, and any associated materials must be used in accordance with the applicable distribution permissions and third-party licenses.
+
+Access to the documentation repository does not automatically grant permission to access, modify, or redistribute the CityFFD solver source code or executable.
+
+## Project
+
+**Urban Microclimate and Building Energy (UMBE) Laboratory**
+
+GitHub Organization: https://github.com/UMBE-LAB
