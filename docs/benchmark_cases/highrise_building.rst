@@ -12,7 +12,7 @@ height. The incoming wind follows a power-law profile with exponent
 ``0.25``. The reference wind speed at ``H`` is ``6.61 m/s``, and the
 experimental wind directions used here is ``0°``.
 
-.. figure:: /_static/images/benchmark_cases/highrise_building/case_d_geometry.png
+.. figure:: ../_static/images/benchmark_cases/highrise_building/case_d_geometry.png
    :width: 50%
    :align: center
    :alt: High-rise building surrounded by low-rise city blocks
@@ -26,7 +26,7 @@ Pedestrian-level wind speeds are measured ``5 mm`` above the model
 ground (``2 m`` at full scale). The locations of the measurement
 points around the central high-rise building are shown below.
 
-.. figure:: /_static/images/benchmark_cases/highrise_building/case_d_measurement_points.png
+.. figure:: ../_static/images/benchmark_cases/highrise_building/case_d_measurement_points.png
    :width: 50%
    :align: center
    :alt: Measurement points around the central high-rise building
@@ -36,7 +36,7 @@ points around the central high-rise building are shown below.
 The figure below shows a comparison of dimensionless wind
 speeds between wind-tunnel measurements and CityFFD2.1.
 
-.. figure:: /_static/images/benchmark_cases/highrise_building/case_d_validation.png
+.. figure:: ../_static/images/benchmark_cases/highrise_building/case_d_validation.png
    :width: 80%
    :align: center
    :alt: Published comparison of dimensionless velocity at measurement points
