@@ -182,7 +182,6 @@ CityFFD2-Docs/
     ├── conf.py
     ├── index.rst
     ├── installation.rst
-    ├── methodology.rst
     ├── user_guide/
     ├── benchmark_cases/
     ├── _static/
