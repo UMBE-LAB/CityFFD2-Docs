@@ -196,7 +196,7 @@ The `docs/` directory contains the Sphinx source files. The `_build/html/` direc
 
 This repository contains documentation only and does not include the CityFFD2 solver source code.
 
-CityFFD2.1 is distributed separately as a precompiled executable to authorized users.
+CityFFD2 is distributed separately as a precompiled executable to authorized users.
 
 The solver requires a compatible runtime environment, including NVIDIA HPC SDK, CUDA, Open MPI, NCCL, TecIO, and HDF5.
 
