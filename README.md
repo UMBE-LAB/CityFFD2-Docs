@@ -11,9 +11,8 @@ The documentation is maintained using **Sphinx** and the **Read the Docs theme**
 The documentation includes:
 
 - **Installation and Execution** — System requirements, runtime libraries, executable distribution, and execution instructions.
-- **User Guide** — Simulation configuration, computational domain, geometry and mesh, boundary conditions, MPI/GPU parallelization, and output settings.
 - **Benchmark Cases** — Validation examples, experimental measurements, and simulation input files.
-
+- **User Guide** — Simulation configuration, computational domain, geometry and mesh, boundary conditions, MPI/GPU parallelization, and output settings.
 
 ## 1. Download the Documentation
 
