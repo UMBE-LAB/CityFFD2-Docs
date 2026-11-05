@@ -39,6 +39,8 @@ Validation Results
 .. figure:: /_static/images/benchmark_cases/natural_ventilation/Q.png
    :width: 85%
    :align: center
+   
+   Vortex structures with Q = 2000
 
 Reference
 ---------
