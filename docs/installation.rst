@@ -95,7 +95,7 @@ case directory. For a four-process example:
 
    cd /path/to/benchmark_case
    source /path/to/cityffd_env.sh
-   mpirun -np 4 /path/to/CityFFD
+   mpirun -np 4 /path/to/CityFFD_solver
 
 
 See :doc:`Getting Started <user_guide/quick_start>` and
