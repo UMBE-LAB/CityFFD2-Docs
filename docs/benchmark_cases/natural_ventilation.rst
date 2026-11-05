@@ -29,14 +29,14 @@ Larger deviations occur in the leeward region.
 Validation Results
 ------------------
 
-.. figure:: /_static/images/benchmark_cases/natural_ventilation/validation.png
+.. figure:: ../_static/images/benchmark_cases/natural_ventilation/validation.png
    :width: 85%
    :align: center
 
    Comparison of mean velocity profiles between CityFFD2.1
    and experimental measurements at four streamwise positions.
 
-.. figure:: /_static/images/benchmark_cases/natural_ventilation/Q.png
+.. figure:: ../_static/images/benchmark_cases/natural_ventilation/Q.png
    :width: 85%
    :align: center
    
