@@ -10,7 +10,7 @@ on multiple NVIDIA GPUs.
 
 .. note::
 
-   This documentation is under active development.
+   This documentation covers CityFFD 2.1 and is under active development.
 
 
 Contents
